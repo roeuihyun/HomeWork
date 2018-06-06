@@ -1,8 +1,8 @@
-package _20180525.Answers;
+package _20180608.Answers;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import _20180525.Answers.PhoneDTO;
+import _20180608.Answers.PhoneDTO;
 
 /**
  * @author roeuihyun
@@ -70,10 +70,10 @@ public class PhoneManagement {
 		int resultLineno = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("삭제를 시작합니다.");
-		System.out.print("삭제할 이름을 입력하세요 : ");
-		String name = sc.nextLine();
+		System.out.print("삭제할 번호를 입력하세요 : ");
+		String PhoneNumber = sc.nextLine();
 		for (int i = 0; i < arrayList.size(); i++) {
-			if (name.equals(arrayList.get(i).getName())) {
+			if (PhoneNumber.equals(arrayList.get(i).getPhoneNumber())) {
 				System.out.println("이름 : " + arrayList.get(i).getName() + "님(의) " + arrayList.get(i).getPhoneNumber() + " 번호가 삭제 되었습니다.");
 				resultLineno = i;
 				noResult = false;

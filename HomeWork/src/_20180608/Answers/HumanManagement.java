@@ -1,27 +1,25 @@
-package _20180525.Answers;
+package _20180608.Answers;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import _20180525.Answers.PhoneDTO;
+import _20180608.Answers.HumanDTO;
 
 /**
  * @author roeuihyun
  */
-public class PhoneManagement {
-
-	public void create(ArrayList<PhoneDTO> arrayList) {
+public class HumanManagement {
+	
+	public void create(ArrayList<HumanDTO> arrayList) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("이름을 입력하세요 : ");
 		String name = sc.nextLine();
-		System.out.print("전화번호를 입력하세요 : ");
-		String phoneNumber = sc.nextLine();
-		System.out.print("기종을 입력하세요 : ");
-		String phoneType = sc.nextLine();
-		arrayList.add(new PhoneDTO(name,phoneNumber, phoneType));
-		System.out.println("이름 : " + name + ", 휴대폰 번호 :" + phoneNumber + ", 기종 : " + phoneType + " 이 등록되었습니다.");
+		System.out.print("나이를 입력하세요 : ");
+		String age = sc.nextLine();
+		arrayList.add( new HumanDTO(name,age) );
+		System.out.println("이름 : " + name + ", 나이 :" + age + " 이 등록되었습니다.");
 	}
 
-	public void search(ArrayList<PhoneDTO> arrayList) {
+	public void search(ArrayList<HumanDTO> arrayList) {
 		boolean notResult = true;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("조회를 시작 합니다.");
@@ -29,7 +27,7 @@ public class PhoneManagement {
 		String name = sc.nextLine();
 		for (int i = 0; i < arrayList.size(); i++) {
 			if (name.equals(arrayList.get(i).getName())) {
-				System.out.println("이름 : " + arrayList.get(i).getName() + ", 휴대폰 번호 :" + arrayList.get(i).getPhoneNumber() +", 기종 : " + arrayList.get(i).getPhoneType() );
+				System.out.println("이름 : " + arrayList.get(i).getName() + ", 나이 :" + arrayList.get(i).getAge() );
 				notResult = false;
 				break;
 			}
@@ -40,7 +38,7 @@ public class PhoneManagement {
 		}
 	}
 
-	public void update(ArrayList<PhoneDTO> arrayList) {
+	public void update(ArrayList<HumanDTO> arrayList) {
 		boolean notResult = true;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("수정을 시작합니다.");
@@ -48,12 +46,9 @@ public class PhoneManagement {
 		String name = sc.nextLine();
 		for (int i = 0; i < arrayList.size(); i++) {
 			if (name.equals(arrayList.get(i).getName())) {
-				System.out.print("휴대폰 번호을 입력하세요 : ");
-				String phoneNumber = sc.nextLine();
-				System.out.print("변경할 기종을 입력하세요: ");
-				String phoneType = sc.nextLine();
-				arrayList.get(i).setPhoneNumber(phoneNumber);
-				arrayList.get(i).setPhoneType(phoneType);
+				System.out.print("나이를 입력하세요 : ");
+				String age = sc.nextLine();
+				arrayList.get(i).setAge(age);
 				System.out.println("수정이 완료되었습니다. ");
 				notResult = false;
 				break;
@@ -65,7 +60,7 @@ public class PhoneManagement {
 		}
 	}
 
-	public void delete(ArrayList<PhoneDTO> arrayList) {
+	public void delete(ArrayList<HumanDTO> arrayList) {
 		boolean noResult = true;
 		int resultLineno = 0;
 		Scanner sc = new Scanner(System.in);
@@ -74,7 +69,7 @@ public class PhoneManagement {
 		String name = sc.nextLine();
 		for (int i = 0; i < arrayList.size(); i++) {
 			if (name.equals(arrayList.get(i).getName())) {
-				System.out.println("이름 : " + arrayList.get(i).getName() + "님(의) " + arrayList.get(i).getPhoneNumber() + " 번호가 삭제 되었습니다.");
+				System.out.println("이름 : " + arrayList.get(i).getName() + "님(의) 정보가 삭제 되었습니다.");
 				resultLineno = i;
 				noResult = false;
 			}
