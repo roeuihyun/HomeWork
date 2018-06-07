@@ -4,7 +4,7 @@ package _20180608.Answers;
  * @author roeuihyun
  */
 public class PhoneDTO {
-	
+	 
 	private String name;
 	private String phoneNumber;
 	private String phoneType;

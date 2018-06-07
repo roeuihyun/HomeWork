@@ -13,7 +13,7 @@ public class RunningTest {
 	public static void main(String[] args) {
 		ArrayList<PhoneDTO> phoneList = new ArrayList<PhoneDTO>();
 		Scanner sc = new Scanner(System.in);
-		PhoneManagement phoneBook = new PhoneManagement();
+		PhoneManagement phoneManagement = new PhoneManagement();
 		boolean phoneLoop = true;
 		while(phoneLoop){
 			System.out.println("메뉴를 선택하세요.");
@@ -26,16 +26,16 @@ public class RunningTest {
 			String select = sc.nextLine();
 			switch(Integer.parseInt(select)) {
 				case 1 :
-					phoneBook.create(phoneList);
+					phoneManagement.create(phoneList);
 					break;
 				case 2 :
-					phoneBook.search(phoneList);
+					phoneManagement.search(phoneList);
 					break;
 				case 3 :
-					phoneBook.update(phoneList);
+					phoneManagement.update(phoneList);
 					break;
 				case 4 :
-					phoneBook.delete(phoneList);
+					phoneManagement.delete(phoneList);
 					break;
 				case 5 :
 					System.out.println("프로그램을 종료합니다.");
