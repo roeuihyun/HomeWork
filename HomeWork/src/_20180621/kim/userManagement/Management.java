@@ -9,8 +9,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-import _20180621.kim.userManagement.User;
-
 public class Management {
 //	Menu menu = new Menu();
 	
