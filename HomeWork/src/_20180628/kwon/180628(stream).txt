@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class ByteArrayIOStream {
 	public static void main(String[] args) {
-		char[] c = new char[] { 'a', 'b', 'c', 'd', 'e' }; // 글자
+		char[] c = new char[] { 'a', 'b', 'c', 'd', 'e' }; // ????
 		CharArrayReader car = new CharArrayReader(c);
 		CharArrayWriter caw = new CharArrayWriter();
 		char[] res2 = null;
@@ -24,7 +24,7 @@ public class ByteArrayIOStream {
 		}
 
 		res2 = caw.toCharArray();
-		System.out.println("ArrayWriter 내용" + Arrays.toString(res2));
+		System.out.println("ArrayWriter ????" + Arrays.toString(res2));
 
 		// ------------------------------------------------
 		byte[] b = { 1, 2, 3, 4, 5 };
@@ -33,15 +33,15 @@ public class ByteArrayIOStream {
 
 		byte[] res = null;
 		int data = 0;
-		while ((data = is.read()) != -1) { // is.read 읽었냐? 라고 묻는 순간 이미 한번 읽었다
-											// 그래서
-			// data = is.read를 사용
+		while ((data = is.read()) != -1) { // is.read ?о???? ??? ???? ???? ??? ??? ?о???
+											// ?????
+			// data = is.read?? ???
 			System.out.println(data);
 			out.write(data);
 		}
 
 		res = out.toByteArray();
-		System.out.println("outstream 내용 " + Arrays.toString(res));
+		System.out.println("outstream ???? " + Arrays.toString(res));
 
 	}
 }
